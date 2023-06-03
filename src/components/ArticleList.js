@@ -1,11 +1,11 @@
 import React from "react";
 import Article from "./Article";
 
-function ArticleList({ post }) {
-    
-    const postHandler = post?.map((post) => {
+function ArticleList(prop) {
+    const { post } = prop
+    const postHandler = post?.map((currentPost) => {
         return (
-            <Article key={post.id} post={post} />
+            <Article key={currentPost.id} post={currentPost} />
         )
     })
 
